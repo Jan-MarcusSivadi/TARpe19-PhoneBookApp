@@ -7,6 +7,9 @@ const router = express.Router();
 router.get('/', contactsController.getHomePage);
 
 // // post new contact
+router.get('/add-contact', contactsController.getFormPage);
+
+// // post new contact
 router.post('/add-contact', contactsController.postNewContact);
 
 // // delete contact

@@ -15,6 +15,20 @@ exports.getHomePage = (req, res) => {
 
 };
 
+// Render contact form Page
+exports.getFormPage = (req, res) => {
+
+    Contact.find((error, contacts) => {
+        if (!error) {
+            res.render('form.ejs');
+        }
+        else {
+            console.log('Failed to retrieve data.');
+        }
+    });
+
+};
+
 // POST new Contact
 exports.postNewContact = (req, res) => {
     let fieldFirst = req.body.newFirst;

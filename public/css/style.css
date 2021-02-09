@@ -1,7 +1,7 @@
 :root {
     --dark-color: #2F3242;
     --light-color:  #4a4d64;
-  
+    --theme-color: orange;
   }
   
   html {
@@ -32,7 +32,7 @@
     }
     
     #heading {
-      background-color: rgb(192, 192, 192);
+      background-color: var(--theme-color);
       text-align: center;
     }
 
@@ -41,7 +41,7 @@
     }
     
     .item {
-      min-height: 70px;
+      /* min-height: 70px; */
       display: flex;
       align-items: center;
     }
@@ -68,50 +68,47 @@
     }
 
     table {
-      border-collapse: initial;
+      /* border-collapse: ; */
+      
     }
 
     .table {
       text-align: center;
-      margin-left: 20px;
+      margin: auto;
       padding-bottom: 0rem;
     }
 
     th {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      /* padding-left: 2rem;
+      padding-right: 2rem; */
       border-bottom: 1px solid #F1F1F1;
-      font-weight: 900;
+      font-weight: 400;
+    }
+
+    .row-id {
+      font-size: 20px;
+      font-weight: 400;
     }
 
     td {
       text-align: center;
-
       margin: 0;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      /* padding-top: 10px;
+      padding-bottom: 10px; */
       font-size: 20px;
       font-weight: 200;
-
       border-bottom: 1px solid #F1F1F1;
     }
 
-    #first_name_field, #last_name_field {
+    #first_name_field, #last_name_field, #phone_number_field {
       text-align: left;
       margin-left: 20px;
       padding: 10px;
       font-size: 20px;
       font-weight: 200;
     }
-    #phone_number_field {
-      text-align: left;
-      margin-left: 20px;
-      padding: 20px;
-      font-size: 20px;
-      font-weight: 200;
-    }
 
-    button, button:active {
+    a, button, button:active {
       text-decoration: none;
       background: transparent;
       border: none;
@@ -119,12 +116,15 @@
 
     .fa-trash-alt {
       text-decoration: none;
-      color: red;
+      color: var(--theme-color);
       font-size: 2rem;
     }
 
     .submit-button {
       margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      background: var(--theme-color)!important;
+      border: none;
     }
     
     input {
@@ -156,7 +156,7 @@
     
     input[type="text"]:focus, input[type="number"]:focus {
       outline: none;
-      box-shadow: inset 0 -3px 0 0 var(--dark-color);
+      box-shadow: inset 0 -3px 0 0 var(--theme-color);
     }
     
     ::placeholder {
